@@ -1,31 +1,24 @@
 import { getName } from 'country-list';
 import React from 'react';
 import { VectorMap } from 'react-jvectormap';
+import AnimatedNumber from './parts/AnimatedNumber';
+import FadeInClip from './parts/FadeInClip';
 
 export default function WorldMap() {
   const handleClick = (e, countryCode) => {
     console.log(countryCode);
   };
-  const countryCard = (name) => {
-    return (
-      <div
-        className="flex items-center justify-center h-20 p-2 m-1 text-xl font-bold text-white bg-gray-700 border border-black rounded-md w-54"
-        key={name}
-      >
-        {name}
-      </div>
-    );
-  };
-  const renderCountry = (e) => {
+  const renderNameParse = (e) => {
     switch (e) {
       case 'VN':
-        return countryCard('Vietnam');
+        return <p>Vietnam</p>;
       case 'GB':
-        return countryCard('Great Britain');
+        return <p>Britain</p>;
       default:
-        return countryCard(getName(e));
+        return <p>{getName(e)}</p>;
     }
   };
+
   const mapData = {
     VN: 0,
     KH: 0,
@@ -49,8 +42,9 @@ export default function WorldMap() {
 
   return (
     <div className="flex flex-col justify-center w-3/5 ">
-      <h1 className="py-10 text-4xl font-semibold">
-        Länderpunkte: {Object.keys(mapData).length}
+      <h1 className="flex justify-center py-10 text-4xl font-semibold">
+        Länderpunkte:
+        <AnimatedNumber number={Object.keys(mapData).length} />
       </h1>
       <div className="overflow-hidden border-2 border-gray-500 rounded">
         <VectorMap
@@ -94,7 +88,7 @@ export default function WorldMap() {
       </div>
       <div className="grid grid-cols-3 mt-5 grid-flow">
         {Object.keys(mapData).map((e) => {
-          return renderCountry(e);
+          return <FadeInClip key={e}>{renderNameParse(e)}</FadeInClip>;
         })}
       </div>
     </div>
