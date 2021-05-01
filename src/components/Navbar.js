@@ -29,7 +29,7 @@ export default function Navbar() {
       </div>
       <FourLines></FourLines>
       <div className="flex flex-row justify-center w-full text-white bg-black h-7">
-        <p>This page is still under Construction</p>
+        <p>This page is still ugnder Construction</p>
         <i class="mx-2 mt-1 fas fa-tools"></i>
       </div>
     </>
