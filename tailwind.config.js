@@ -28,6 +28,10 @@ module.exports = {
       pink: colors.pink,
       darkgrey: '#171a21',
       cmdgreen: '#74aa04',
+      facebookblue: '#1194f4',
+      twitterblue: '#1da1f2',
+      instagrampink: '#ed4956',
+      lightgraymedia: '#272c38',
     },
     spacing: {
       px: '1px',

@@ -4,7 +4,7 @@ import FourLines from './parts/FourLines';
 export default function Navbar() {
   return (
     <>
-      <div className="w-full w-screen mx-auto bg-darkgrey ">
+      <div className="w-full mx-auto bg-darkgrey ">
         <nav className="flex items-center justify-between content-evenly">
           <div className="ml-1 ">
             <Logo className=""></Logo>
@@ -28,6 +28,10 @@ export default function Navbar() {
         </nav>
       </div>
       <FourLines></FourLines>
+      <div className="flex flex-row justify-center w-full text-white bg-black h-7">
+        <p>This page is still under Construction</p>
+        <i class="mx-2 mt-1 fas fa-tools"></i>
+      </div>
     </>
   );
 }

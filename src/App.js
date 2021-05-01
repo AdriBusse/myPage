@@ -8,9 +8,7 @@ function App() {
     <div className="w-screen h-full bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600">
       <Navbar></Navbar>
       {/**Page Content */}
-      <div className="flex justify-center">
-        <WorldMap />
-      </div>
+      <div className="flex justify-center h-screen"></div>
       <Footer></Footer>
     </div>
   );
