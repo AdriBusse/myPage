@@ -1,10 +1,11 @@
 import React from 'react';
 import Logo from './Logo';
+import FourLines from './parts/FourLines';
 export default function Navbar() {
   return (
     <>
       <div className="w-full w-screen mx-auto bg-darkgrey ">
-        <nav className="flex justify-between">
+        <nav className="flex items-center justify-between content-evenly">
           <div className="ml-1 ">
             <Logo className=""></Logo>
           </div>
@@ -26,10 +27,7 @@ export default function Navbar() {
           </div>
         </nav>
       </div>
-      <div className="w-full h-1 bg-red-500"></div>
-      <div className="w-full h-1 bg-green-500"></div>
-      <div className="w-full h-1 bg-purple-500"></div>
-      <div className="w-full h-1 bg-yellow-500"></div>
+      <FourLines></FourLines>
     </>
   );
 }
